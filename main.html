@@ -3,21 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Site</title>
     <style>
         * {
-            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .logo_container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #logo_spotify {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .form_container {
+            margin-bottom: 30px;
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            padding: 0 5px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            height: 48px;
+            background: none;
+            border: 1px solid #535353;
+            border-radius: 4px;
+            padding: 0  16px;
+            color: white;
+            font-size: 16px;
+            margin-bottom: -10px;
+        }
+
+        input[type="email"]:hover {
+            border-color: #ffffff;
+            outline: none;
+        }
+
+        .phone-link {
+            display: block;
+            color: #1db954;
+            text-align: left;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 48px;
+            border-radius: 500px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: #1db954;
+            color: white;
+            border: none;
+        }
+
+        .btn-secondary {
+            background: none;
+            color: white;
+            border: 1px solid;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            color: #b3b3b3;
+        }
+
+        .divider-line {
+            flex-grow: 1px;
+            height: 1px;
+            background-color: #b3b3b3;
+
+        }
+
+        .divider-text {
+            padding: 0 15px;
+            font-size: 14px;
+        }
+
+        .login-link {
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .login-link a {
+            text-align: center;
+            color: #1DB954;
+            text-decoration: none;
+       
+        }
+
+        .footer {
+            font-size: 10px;
+            color: #b3b3b3;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .footer a {
+            color: #1DB954;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <h1>Se inscreva e comece a curtir</h1>
-    <form novalidate="novalidate">
-        <fieldset id="email">
-            <legend>Endereço de e-mail</legend>
-            <input type="email" name="email" id="email" placeholder="nome@dominio.com" required>
-        </fieldset>
-    </form>
-    <p><a href="" target="_self">Usar número de telefone.</a></p>
+    <div class="logo_container">
+        <img id="logo_spotify" id="logo_" src="https://www.iconsdb.com/icons/preview/white/spotify-xxl.png"
+        alt="Spotify_logo">
+        <h1>Se inscreva e comece a curtir</h1>
+    </div>
+
+    <div class="form_container">
+        <form novalidate="novalidate">
+            <fieldset>
+                <legend id="frase_email">Endereço de e-mail</legend>
+                <input type="email" name="email" id="email_input" placeholder="nome@dominio.com" required>
+            </fieldset>
+            <a href="#" class="phone-link">Usar número de telefone.</a>
+            <br>
+            <button class="btn btn-primary" type="submit">Avançar</button>
+        </form>
+    </div>
+
+    <div class="divider">
+        <div class="divider-line"></div>
+        <span class="divider-text"></span>
+        <div class="divider-line"></div>
+    </div>
+
+    <div class="social-buttons">
+        <button class="btn btn-secondary">
+            <img src="google.png" width="20" alt="Google">
+            Inscreva-se com Google
+        </button> 
+        <button class="btn btn-secondary">
+            <img src="facebook.png" width="20" alt="Facebook">
+            Inscreva-se com Facebook
+        </button> 
+        <button class="btn btn-secondary">
+            <img src="apple.png" width="20" alt="Apple">
+            Inscreva-se com Apple
+        </button> 
+    </div>
+
+    <div class="login-link">
+        Já tem uma conta? <a href="#">Faça login aqui.</a>
+    </div>
+
+    <div class="footer">
+        <p>Este site é protegido pelo reCAPTCHA e está sujeito à <a href="#">Política de Privacidade</a> e <a href="#">Termos de Serviço</a> do Google.</p>
+    </div>
 </body>
 </html>
